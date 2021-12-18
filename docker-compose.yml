@@ -1,0 +1,269 @@
+version: "3.8"
+services:
+  antimatter:
+    image: nishantpanwar77/antimatterui:latest
+    container_name: antimatter-ui
+    restart: always
+    ports:
+      - "3000:3000"
+
+  postgres-test:
+    image: postgres:9.6-alpine
+    container_name: postgres-testdb
+    restart: always
+    ports:
+      - 5433:5432
+    volumes:
+      - ./backend/postgres:/var/lib/postgresql/data/pgdata
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_PASSWORD: UCDoCjYxCFWReZeyJjovrrfczXgvPnvB
+
+  lightdash-db:
+    image: postgres
+    container_name: postgres-lightdash
+    restart: always
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_PASSWORD: ${PGPASSWORD}
+      POSTGRES_USER: ${PGUSER:-postgres}
+      POSTGRES_DB: ${PGDATABASE:-postgres}
+
+  redis:
+    image: redis:6.2.4-alpine
+    container_name: redis-jitsu
+    restart: always
+    volumes:
+      - ./backend/redis:/data
+
+  clickhouse:
+    image: yandex/clickhouse-server
+    container_name: clickhouse-db
+    restart: always
+    ports:
+      - 8123:8123
+      - 9000:9000
+    volumes:
+      - ./backend/clickhouse:/var/lib/clickhouse
+      - ./ch-settings/etc/users.d/:/etc/clickhouse-server/users.d/
+
+  jitsu:
+    image: jitsucom/jitsu:latest
+    container_name: jitsu
+    restart: always
+    depends_on:
+      - redis
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - UI_AUTH_REFRESH_SECRET=ULWBZyNfBeXPPVbwsEwgNVezsbjjyVdq
+      - UI_AUTH_ACCESS_SECRET=sNVPJZnQZLMpKXvVHfdHMnitNHsRmURC
+      - SERVER_ADMIN_TOKEN=sNVPJZnSIKLJUHFBVIURHZDUnitNHsRmURC
+      - CONFIGURATOR_ADMIN_TOKEN=salhfgLIARVUGiygdaLAGFRRLIGxnb
+    volumes:
+      - ./backend/jitsu/configurator:/home/configurator/data/logs
+      - ./backend/jitsu/events:/home/eventnative/data/logs/events
+      - ./backend/jitsu/login:/home/eventnative/data/logs
+      - ./backend/jitsu/login:/home/eventnative/data/airbyte
+      - workspace:/home/eventnative/data/airbyte
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  tabix:
+    image: spoonest/clickhouse-tabix-web-client
+    container_name: tabix
+    restart: always
+    links:
+      - clickhouse
+    ports:
+      - 8181:80
+    # VALUES:
+    # NAME: CH
+    # UserName: default
+
+  sqlpad:
+    image: sqlpad/sqlpad:latest
+    container_name: sqlpad
+    restart: always
+    ports:
+      - 3002:3000
+    volumes:
+      - ./backend/sqlpad:/var/lib/sqlpad
+    environment:
+      - SQLPAD_AUTH_DISABLED=true
+      - SQLPAD_AUTH_DISABLED_DEFAULT_ROLE=admin
+      - SQLPAD_USERPASS_AUTH_DISABLED=true
+      - SQLPAD_ADMIN_PASSWORD=5aWC9bWss2kZjr6MoowFokbPqrFEagts
+      - SQLPAD_ADMIN=example@example.com
+
+  jupyter:
+    image: jupyter/datascience-notebook
+    container_name: jupyter
+    restart: always
+    ports:
+      - 8888:8888
+    environment:
+      JUPYTER_TOKEN: easy #URL:PORT/?token=easy
+      NB_UID: 1000
+      NB_GID: 100
+      JUPYTER_ENABLE_LAB: yes
+    links:
+      - clickhouse
+    volumes:
+      - ./backend/jupyter-data-dir:/home/jovyan/work
+      - ./clickhouse_helper.py:/home/jovyan/work/clickhouse_helper.py
+    # for password using generate pwd hash IPython.lib.passwd()
+    # command: start-notebook.sh --NotebookApp.password='sha1:92557d72fa24:0bb69987c3b3c6218f466258ee0e5e2a87e34671'
+
+  cubestore:
+    image: cubejs/cubestore:latest
+    container_name: cubestore
+    restart: always
+    ports:
+      - 3030:3030
+    volumes:
+      - ./backend/cube:/cube/data
+    environment:
+      - CUBESTORE_REMOTE_DIR=/cube/data
+
+  cube:
+    image: cubejs/cube:latest
+    container_name: cube
+    restart: always
+    ports:
+      - 4000:4000
+    depends_on:
+      - cubestore
+    links:
+      - cubestore
+    volumes:
+      - ./backend/cube/conf/schema:/cube/conf/schema
+    environment:
+      - CUBEJS_CUBESTORE_HOST=localhost
+
+  trino:
+    image: trinodb/trino
+    container_name: trino
+    restart: always
+    ports:
+      - 8081:8080
+
+  postgres-metabase:
+    image: postgres:10
+    container_name: postgres-metabase
+    restart: always
+    volumes:
+      - ./backend/postgres-metabase:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: UCDoCjYxCFWReZeyJjovrrfczXgvPnvB
+      POSTGRES_USER: metabase_user
+      POSTGRES_DB: metabase
+
+  metabase:
+    depends_on:
+      - postgres-metabase
+    image: bjeanes/metabase-clickhouse
+    container_name: metabase
+    restart: always
+    ports:
+      - 3001:3000
+    volumes:
+      - ./backend/metabase:/metabase-data
+    environment:
+      # - MB_DB_FILE=/metabase-data/metabase.db
+      JAVA_TIMEZONE: Asia/Kolkata
+      JAVA_OPTS: -Xmx4g
+      MB_ENCRYPTION_SECRET_KEY: UCDoCjYxCFWReZeyJjovrrfczXgvPnvB
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase
+      MB_DB_PORT: 5432
+      MB_DB_USER: metabase_user
+      MB_DB_PASS: UCDoCjYxCFWReZeyJjovrrfczXgvPnvB
+      MB_DB_HOST: postgres-metabase
+
+  lightdash:
+    image: lightdash/lightdash:latest
+    container_name: lightdash
+    restart: always
+    depends_on:
+      - lightdash-db
+    environment:
+      - PGHOST=${PGHOST:-lightdash-db}
+      - PGPORT=${PGPORT:-5434}
+      - PGUSER=${PGUSER:-postgres}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGDATABASE=${PGDATABASE:-postgres}
+      - SECURE_COOKIES=${SECURE_COOKIES:-false}
+      - TRUST_PROXY=${TRUST_PROXY:-false}
+      - LIGHTDASH_SECRET=${LIGHTDASH_SECRET:-lightdashsecret}
+      - PORT=${PORT:-8080}
+      - LIGHTDASH_INSTALL_ID=${LIGHTDASH_INSTALL_ID:-local}
+      - LIGHTDASH_INSTALL_TYPE=${LIGHTDASH_INSTALL_TYPE:-docker_image}
+    volumes:
+      - "${DBT_PROJECT_DIR}:/usr/app/dbt"
+    ports:
+      - 8082:${PORT:-8080}
+
+  # mindsdb UI is available at http://localhost:47334/
+  mindsdb:
+    image: mindsdb/mindsdb
+    container_name: mindsdb
+    restart: always
+    ports:
+      - 47334:47334
+      - 47335:47335
+      - 47336:47336
+
+  web:
+    image: taskcafe/taskcafe:latest
+    container_name: taskcafe
+    # build: .
+    ports:
+      - 3333:3333
+    depends_on:
+      - postgres
+    networks:
+      - taskcafe-test
+    environment:
+      TASKCAFE_DATABASE_HOST: postgres
+      TASKCAFE_MIGRATE: "true"
+    volumes:
+      - taskcafe-uploads:/root/uploads
+
+  postgres:
+    image: postgres:12.3-alpine
+    container_name: taskcafe-postgres
+    restart: always
+    networks:
+      - taskcafe-test
+    environment:
+      POSTGRES_USER: taskcafe
+      POSTGRES_PASSWORD: taskcafe_test
+      POSTGRES_DB: taskcafe
+    volumes:
+      - taskcafe-postgres:/var/lib/postgresql/data
+
+  monit:
+    image: pottava/docker-webui
+    ports:
+      - 9100:9100
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - APP_PORT=9100
+      - DOCKER_HOST
+      - APP_LABEL_OVERRIDE_NAMES=com.docker.compose.service
+      - APP_LABEL_FILTERS=com.docker.compose.service
+
+volumes:
+  workspace:
+    name: jitsu_workspace
+  taskcafe-postgres:
+    external: false
+  taskcafe-uploads:
+    external: false
+
+networks:
+  taskcafe-test:
+    driver: bridge

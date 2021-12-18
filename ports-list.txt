@@ -1,0 +1,52 @@
+ports-list:
+
+    container_name: antimatter-ui
+    port: 3000 
+
+    container_name: postgres-testdb
+    port: 5433
+
+    container_name: postgres-lightdash
+    port: 5434
+
+    container_name: redis-jitsu
+    port: 6379
+
+    container_name: jitsu
+    port: 8000
+
+    container_name: tabix
+    ports: 8181
+
+    container_name: sqlpad
+    ports: 3002
+
+    container_name: jupyter
+    ports: 8888
+
+    container_name: cube
+    ports: 4000
+
+    container_name: cubestore
+    ports: 3030
+
+    container_name: trino
+    ports: 8081
+
+    container_name: metabase
+    ports: 3001
+
+    container_name: postgres-metabase
+    ports: 5432
+
+    container_name: lightdash
+    ports: 8082
+
+    container_name: mindsdb
+    ports: 47334, 47335, 47336
+
+    container_name: taskcafe
+    ports: 3333
+
+    container_name: taskcafe-postgres
+
