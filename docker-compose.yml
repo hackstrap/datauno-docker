@@ -16,7 +16,7 @@ services:
     ports:
       - 3000:3000
   tabix:
-    image: spoonest/clickhouse-tabix-web-client
+    image: vchernikh/tabix:latest
     container_name: tabix
     restart: always
     links:

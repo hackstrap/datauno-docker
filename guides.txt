@@ -1,2 +1,5 @@
 1. https://adamtheautomator.com/docker-compose-tutorial/
 
+2. https://www.nginx.com/resources/wiki/start/topics/examples/full/
+
+

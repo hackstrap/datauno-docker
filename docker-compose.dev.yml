@@ -71,7 +71,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   tabix:
-    image: spoonest/clickhouse-tabix-web-client
+    image: vchernikh/tabix:latest
     container_name: tabix
     restart: always
     links:
