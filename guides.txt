@@ -3,3 +3,20 @@
 2. https://www.nginx.com/resources/wiki/start/topics/examples/full/
 
 
+We can see which applications our Firewall currently allows by using the following command:
+
+`sudo ufw app list`
+
+`ufw status verbose`
+
+`sudo ufw allow OpenSSH`
+
+`sudo ufw allow 80`
+
+`sudo ufw allow 443`
+
+`sudo ufw allow 'Nginx HTTP'`
+
+`sudo ufw allow 'Nginx Full'`
+
+`stat --format '%a' <file>`
