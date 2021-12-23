@@ -67,3 +67,6 @@ Default username and password is: datahub:datahub
 visit the following url to begin exploring OpenMetadata: http://localhost:8585 (user: openmetadata_user
 password: openmetadata_password)
 To checkout Ingestion via Airflow, go to http://localhost:8083 (username: admin, password: admin)
+
+ODD Platform: http://localhost:8088 {username: admin, password: admin}
+
