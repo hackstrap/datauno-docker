@@ -58,7 +58,9 @@ ports-list:
 
 
 
-Navigate to http://localhost:58080 to confirm and find your Airflow webserver. 
-Default username and password is:
-```
-airflow:airflow
+For Airflow http://localhost:58080 
+Default username and password is: airflow:airflow
+
+For DataHub http://localhost:9002
+Default username and password is: datahub:datahub
+
