@@ -1,0 +1,144 @@
+[2021-12-12 08:38:19,968] {processor.py:162} INFO - Started process (PID=28) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:38:19,981] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:38:19,987] {logging_mixin.py:109} INFO - [2021-12-12 08:38:19,987] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:38:20,031] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:38:28,509] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/azure/cosmos/session.py:186 SyntaxWarning: "is not" with a literal. Did you mean "!="?
+[2021-12-12 08:38:28,597] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/azure/storage/common/_connection.py:82 SyntaxWarning: "is" with a literal. Did you mean "=="?
+[2021-12-12 08:38:35,652] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (3.0.0), please install a version that adheres to: 'pyarrow<5.1.0,>=5.0.0; extra == "pandas"'
+[2021-12-12 08:38:41,045] {logging_mixin.py:109} INFO - [2021-12-12 08:38:41,044] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:38:41,070] {logging_mixin.py:109} INFO - [2021-12-12 08:38:41,069] {dag.py:1852} INFO - Creating ORM DAG for datahub_lineage_backend_demo
+[2021-12-12 08:38:41,081] {logging_mixin.py:109} INFO - [2021-12-12 08:38:41,081] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-11 08:38:41.080645+00:00
+[2021-12-12 08:38:41,240] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 21.301 seconds
+[2021-12-12 08:39:42,342] {processor.py:162} INFO - Started process (PID=332) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:39:42,345] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:39:42,346] {logging_mixin.py:109} INFO - [2021-12-12 08:39:42,346] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:39:42,366] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:39:42,392] {logging_mixin.py:109} INFO - [2021-12-12 08:39:42,392] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:39:42,407] {logging_mixin.py:109} INFO - [2021-12-12 08:39:42,407] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-11 08:39:42.407119+00:00
+[2021-12-12 08:39:42,419] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.081 seconds
+[2021-12-12 08:40:12,598] {processor.py:162} INFO - Started process (PID=382) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:40:12,601] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:40:12,603] {logging_mixin.py:109} INFO - [2021-12-12 08:40:12,603] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:40:12,622] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:40:12,650] {logging_mixin.py:109} INFO - [2021-12-12 08:40:12,650] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:40:12,666] {logging_mixin.py:109} INFO - [2021-12-12 08:40:12,666] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-11 08:40:12.666178+00:00
+[2021-12-12 08:40:12,678] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.084 seconds
+[2021-12-12 08:40:42,794] {processor.py:162} INFO - Started process (PID=435) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:40:42,795] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:40:42,798] {logging_mixin.py:109} INFO - [2021-12-12 08:40:42,797] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:40:42,815] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:40:42,841] {logging_mixin.py:109} INFO - [2021-12-12 08:40:42,841] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:40:42,856] {logging_mixin.py:109} INFO - [2021-12-12 08:40:42,855] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-11 08:40:42.855749+00:00
+[2021-12-12 08:40:42,867] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.078 seconds
+[2021-12-12 08:41:13,171] {processor.py:162} INFO - Started process (PID=484) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:41:13,174] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:41:13,175] {logging_mixin.py:109} INFO - [2021-12-12 08:41:13,175] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:41:13,196] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:41:13,221] {logging_mixin.py:109} INFO - [2021-12-12 08:41:13,221] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:41:13,237] {logging_mixin.py:109} INFO - [2021-12-12 08:41:13,237] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-11 08:41:13.237167+00:00
+[2021-12-12 08:41:13,250] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.082 seconds
+[2021-12-12 08:41:43,483] {processor.py:162} INFO - Started process (PID=541) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:41:43,486] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:41:43,487] {logging_mixin.py:109} INFO - [2021-12-12 08:41:43,487] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:41:43,508] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:41:43,535] {logging_mixin.py:109} INFO - [2021-12-12 08:41:43,535] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:41:43,552] {logging_mixin.py:109} INFO - [2021-12-12 08:41:43,552] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-11 08:41:43.551727+00:00
+[2021-12-12 08:41:43,565] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.086 seconds
+[2021-12-12 08:42:13,683] {processor.py:162} INFO - Started process (PID=592) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:42:13,687] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:42:13,689] {logging_mixin.py:109} INFO - [2021-12-12 08:42:13,688] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:42:13,716] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:42:13,747] {logging_mixin.py:109} INFO - [2021-12-12 08:42:13,747] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:42:13,766] {logging_mixin.py:109} INFO - [2021-12-12 08:42:13,766] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:42:13,780] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.102 seconds
+[2021-12-12 08:42:43,936] {processor.py:162} INFO - Started process (PID=651) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:42:43,943] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:42:43,952] {logging_mixin.py:109} INFO - [2021-12-12 08:42:43,952] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:42:44,008] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:42:44,106] {logging_mixin.py:109} INFO - [2021-12-12 08:42:44,106] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:42:44,177] {logging_mixin.py:109} INFO - [2021-12-12 08:42:44,177] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:42:44,261] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.336 seconds
+[2021-12-12 08:43:15,327] {processor.py:162} INFO - Started process (PID=699) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:43:15,333] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:43:15,335] {logging_mixin.py:109} INFO - [2021-12-12 08:43:15,335] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:43:15,383] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:43:15,424] {logging_mixin.py:109} INFO - [2021-12-12 08:43:15,424] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:43:15,453] {logging_mixin.py:109} INFO - [2021-12-12 08:43:15,453] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:43:15,470] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.156 seconds
+[2021-12-12 08:43:45,936] {processor.py:162} INFO - Started process (PID=757) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:43:45,957] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:43:45,958] {logging_mixin.py:109} INFO - [2021-12-12 08:43:45,958] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:43:45,976] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:43:46,002] {logging_mixin.py:109} INFO - [2021-12-12 08:43:46,002] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:43:46,018] {logging_mixin.py:109} INFO - [2021-12-12 08:43:46,018] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:43:46,030] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.099 seconds
+[2021-12-12 08:44:16,326] {processor.py:162} INFO - Started process (PID=805) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:44:16,328] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:44:16,329] {logging_mixin.py:109} INFO - [2021-12-12 08:44:16,329] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:44:16,349] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:44:16,379] {logging_mixin.py:109} INFO - [2021-12-12 08:44:16,378] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:44:16,395] {logging_mixin.py:109} INFO - [2021-12-12 08:44:16,395] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:44:16,406] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.084 seconds
+[2021-12-12 08:44:46,720] {processor.py:162} INFO - Started process (PID=863) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:44:46,722] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:44:46,725] {logging_mixin.py:109} INFO - [2021-12-12 08:44:46,725] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:44:46,749] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:44:46,773] {logging_mixin.py:109} INFO - [2021-12-12 08:44:46,773] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:44:46,795] {logging_mixin.py:109} INFO - [2021-12-12 08:44:46,795] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:44:46,824] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.108 seconds
+[2021-12-12 08:52:23,608] {processor.py:162} INFO - Started process (PID=51) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:52:23,613] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:52:23,617] {logging_mixin.py:109} INFO - [2021-12-12 08:52:23,615] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:52:23,684] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:52:23,732] {logging_mixin.py:109} INFO - [2021-12-12 08:52:23,731] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:52:23,758] {logging_mixin.py:109} INFO - [2021-12-12 08:52:23,758] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:52:23,781] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.186 seconds
+[2021-12-12 08:52:54,444] {processor.py:162} INFO - Started process (PID=101) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:52:54,447] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:52:54,449] {logging_mixin.py:109} INFO - [2021-12-12 08:52:54,448] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:52:54,481] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:52:54,521] {logging_mixin.py:109} INFO - [2021-12-12 08:52:54,521] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:52:54,559] {logging_mixin.py:109} INFO - [2021-12-12 08:52:54,559] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:52:54,605] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.165 seconds
+[2021-12-12 08:53:25,098] {processor.py:162} INFO - Started process (PID=159) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:53:25,101] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:53:25,103] {logging_mixin.py:109} INFO - [2021-12-12 08:53:25,102] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:53:25,129] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:53:25,155] {logging_mixin.py:109} INFO - [2021-12-12 08:53:25,155] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:53:25,173] {logging_mixin.py:109} INFO - [2021-12-12 08:53:25,173] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:53:25,188] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.094 seconds
+[2021-12-12 08:53:55,894] {processor.py:162} INFO - Started process (PID=216) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:53:55,896] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:53:55,898] {logging_mixin.py:109} INFO - [2021-12-12 08:53:55,898] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:53:55,916] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:53:55,939] {logging_mixin.py:109} INFO - [2021-12-12 08:53:55,939] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:53:55,952] {logging_mixin.py:109} INFO - [2021-12-12 08:53:55,952] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:53:55,963] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.073 seconds
+[2021-12-12 08:54:26,379] {processor.py:162} INFO - Started process (PID=266) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:54:26,383] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:54:26,384] {logging_mixin.py:109} INFO - [2021-12-12 08:54:26,384] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:54:26,404] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:54:26,431] {logging_mixin.py:109} INFO - [2021-12-12 08:54:26,430] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:54:26,447] {logging_mixin.py:109} INFO - [2021-12-12 08:54:26,447] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:54:26,460] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.086 seconds
+[2021-12-12 08:54:56,945] {processor.py:162} INFO - Started process (PID=323) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:54:56,947] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:54:56,948] {logging_mixin.py:109} INFO - [2021-12-12 08:54:56,948] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:54:56,967] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:54:56,989] {logging_mixin.py:109} INFO - [2021-12-12 08:54:56,989] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:54:57,004] {logging_mixin.py:109} INFO - [2021-12-12 08:54:57,004] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:54:57,014] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.074 seconds
+[2021-12-12 08:55:27,272] {processor.py:162} INFO - Started process (PID=372) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:55:27,274] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:55:27,276] {logging_mixin.py:109} INFO - [2021-12-12 08:55:27,275] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:55:27,295] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:55:27,331] {logging_mixin.py:109} INFO - [2021-12-12 08:55:27,331] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:55:27,355] {logging_mixin.py:109} INFO - [2021-12-12 08:55:27,355] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:55:27,370] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.103 seconds
+[2021-12-12 08:55:57,811] {processor.py:162} INFO - Started process (PID=429) to work on /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:55:57,815] {processor.py:613} INFO - Processing file /opt/airflow/dags/lineage_backend_demo.py for tasks to queue
+[2021-12-12 08:55:57,817] {logging_mixin.py:109} INFO - [2021-12-12 08:55:57,817] {dagbag.py:496} INFO - Filling up the DagBag from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:55:57,863] {processor.py:623} INFO - DAG(s) dict_keys(['datahub_lineage_backend_demo']) retrieved from /opt/airflow/dags/lineage_backend_demo.py
+[2021-12-12 08:55:57,915] {logging_mixin.py:109} INFO - [2021-12-12 08:55:57,915] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-12 08:55:57,948] {logging_mixin.py:109} INFO - [2021-12-12 08:55:57,947] {dag.py:2306} INFO - Setting next_dagrun for datahub_lineage_backend_demo to 2021-12-12 08:41:43.551727+00:00
+[2021-12-12 08:55:57,978] {processor.py:170} INFO - Processing /opt/airflow/dags/lineage_backend_demo.py took 0.174 seconds

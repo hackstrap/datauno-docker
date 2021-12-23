@@ -1,0 +1,26 @@
+dbt-clickhouse:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: dbt
+      host: host.docker.internal
+      port: 9000
+      user: default
+      password: ''
+
+# your_profile_name:
+#   target: dev
+#   outputs:
+#     dev:
+#       type: clickhouse
+#       schema: [database name]
+#       host: [db.clickhouse.com]
+
+#       # optional
+#       port: [port]  # default 9000
+#       user: [user]
+#       password: [abc123]
+#       cluster: [cluster name]
+#       verify: [verify] # default False
+#       secure: [secure] # default False

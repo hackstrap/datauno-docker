@@ -1,0 +1,23 @@
+[2021-12-23 14:18:00,649] {processor.py:162} INFO - Started process (PID=116) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:18:00,652] {processor.py:613} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2021-12-23 14:18:00,654] {logging_mixin.py:109} INFO - [2021-12-23 14:18:00,654] {dagbag.py:496} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:18:00,672] {processor.py:623} INFO - DAG(s) dict_keys(['example_branch_operator']) retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:18:02,947] {logging_mixin.py:109} WARNING - /home/airflow/.local/lib/python3.8/site-packages/snowflake/connector/options.py:94 UserWarning: You have an incompatible version of 'pyarrow' installed (3.0.0), please install a version that adheres to: 'pyarrow<5.1.0,>=5.0.0; extra == "pandas"'
+[2021-12-23 14:18:03,368] {logging_mixin.py:109} INFO - [2021-12-23 14:18:03,368] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-23 14:18:03,376] {logging_mixin.py:109} INFO - [2021-12-23 14:18:03,376] {dag.py:1852} INFO - Creating ORM DAG for example_branch_operator
+[2021-12-23 14:18:03,385] {logging_mixin.py:109} INFO - [2021-12-23 14:18:03,385] {dag.py:2306} INFO - Setting next_dagrun for example_branch_operator to 2021-12-21 00:00:00+00:00
+[2021-12-23 14:18:03,396] {processor.py:170} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py took 2.751 seconds
+[2021-12-23 14:18:33,884] {processor.py:162} INFO - Started process (PID=334) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:18:33,889] {processor.py:613} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2021-12-23 14:18:33,893] {logging_mixin.py:109} INFO - [2021-12-23 14:18:33,893] {dagbag.py:496} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:18:33,946] {processor.py:623} INFO - DAG(s) dict_keys(['example_branch_operator']) retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:18:33,990] {logging_mixin.py:109} INFO - [2021-12-23 14:18:33,990] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-23 14:18:34,018] {logging_mixin.py:109} INFO - [2021-12-23 14:18:34,017] {dag.py:2306} INFO - Setting next_dagrun for example_branch_operator to 2021-12-21 00:00:00+00:00
+[2021-12-23 14:18:34,034] {processor.py:170} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py took 0.164 seconds
+[2021-12-23 14:19:04,389] {processor.py:162} INFO - Started process (PID=392) to work on /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:19:04,391] {processor.py:613} INFO - Processing file /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2021-12-23 14:19:04,393] {logging_mixin.py:109} INFO - [2021-12-23 14:19:04,393] {dagbag.py:496} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:19:04,413] {processor.py:623} INFO - DAG(s) dict_keys(['example_branch_operator']) retrieved from /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py
+[2021-12-23 14:19:04,443] {logging_mixin.py:109} INFO - [2021-12-23 14:19:04,443] {dag.py:1833} INFO - Sync 1 DAGs
+[2021-12-23 14:19:04,465] {logging_mixin.py:109} INFO - [2021-12-23 14:19:04,465] {dag.py:2306} INFO - Setting next_dagrun for example_branch_operator to 2021-12-21 00:00:00+00:00
+[2021-12-23 14:19:04,478] {processor.py:170} INFO - Processing /home/airflow/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py took 0.094 seconds

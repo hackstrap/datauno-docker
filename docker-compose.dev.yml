@@ -246,6 +246,8 @@ services:
 
   monit:
     image: pottava/docker-webui
+    container_name: monit
+    restart: always
     ports:
       - 9100:9100
     volumes:

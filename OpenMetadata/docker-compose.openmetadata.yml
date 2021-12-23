@@ -1,0 +1,79 @@
+#  Copyright 2021 Collate
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#  http://www.apache.org/licenses/LICENSE-2.0
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# visit the following url to begin exploring OpenMetadata: http://localhost:8585
+# To checkout Ingestion via Airflow, go to http://localhost:8083 (username: admin, password: admin)
+
+version: "3.9"
+services:
+  mysql:
+    image: openmetadata/db:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    expose:
+      - 3306
+    networks:
+      app_net:
+        ipv4_address: 172.16.240.10
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1024m -Xmx1024m
+
+    networks:
+      app_net:
+        ipv4_address: 172.16.240.11
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+  openmetadata-server:
+    restart: always
+    image: openmetadata/server:latest
+    expose:
+      - 8585
+      - 9200
+      - 9300
+      - 3306
+    ports:
+      - 8585:8585
+    depends_on:
+      - mysql
+    networks:
+      app_net:
+        ipv4_address: 172.16.240.13
+    extra_hosts:
+      - "localhost:172.16.240.10"
+      - "elasticsearch:172.16.240.11"
+
+  ingestion:
+    image: openmetadata/ingestion:latest
+    depends_on:
+      - mysql
+    expose:
+      - 8083
+    ports:
+      - 8083:8080
+    networks:
+      - app_net
+    extra_hosts:
+      - "localhost:172.16.240.10"
+      - "localhost:172.16.240.11"
+      - "localhost:172.16.240.13"
+
+networks:
+  app_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.16.240.0/24"

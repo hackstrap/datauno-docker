@@ -1,0 +1,64 @@
+#https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+version: "3.8"
+services:
+  clickhouse:
+    image: yandex/clickhouse-server
+    container_name: clickhouse
+    restart: always
+    ports:
+      - 8123:8123
+      - 9000:9000
+    volumes:
+      - ./backend/dbt-clickhouse:/var/lib/clickhouse
+      - ./ch-settings/etc/users.d/:/etc/clickhouse-server/users.d/
+
+  code-server:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: sandeepdevarapalli/code-server
+    container_name: dbt-code-server
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./code-server/config:/code/.config/code-server
+      - ./dbt_project/dbt_profiles:/code/.dbt
+      - ./dbt_project:/code/dbt_project
+
+  # code-server-linux:
+  #   image: codercom/code-server
+  #   container_name: dbt-code-server
+  #   restart: always
+  #   ports:
+  #     - 8080:8080
+  #   environment:
+  #     - TZ=Asia/Kolkata
+  #     - PASSWORD=password #optional
+  #     # - HASHED_PASSWORD= #optional
+  #     - SUDO_PASSWORD=password #optional
+  #     # - SUDO_PASSWORD_HASH= #optional
+  #     # - PROXY_DOMAIN=code-server.my.domain #optional
+  #     # - DEFAULT_WORKSPACE=/config/workspace #optional
+  #   volumes:
+  #     - ./code_server/config:/home/coder/.config
+  #     - ./code_server/projects:/root/projects
+  #     - ./code_server/data:/data
+  #     # - ./dbt_project/dbt_logs:/root/logs
+  #     # - ./dbt_project/dbt_profiles:/config/dbt_project/dbt_profiles
+  #     # - ./dbt_project/dbt_logs:/config/dbt_project/dbt_logs
+# cd dbt_project (If not already in the directory)
+# sudo apt-get update
+# sudo apt-get install python3
+# sudo apt install python3-pip -y
+# sudo pip install dbt-clickhouse
+# dbt --version
+# sudo dbt init dbt_clickhouse --profiles-dir=/config/dbt_project/dbt_profiles
+
+#log path in dbt_project.yml
+#log-path: /config/dbt_project/dbt_logs
+
+# sudo apt-get install rsync -y
+# rsync -a /root/logs /config/dbt_project/dbt_logs
+
