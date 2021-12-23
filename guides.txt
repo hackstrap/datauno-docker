@@ -20,3 +20,9 @@ We can see which applications our Firewall currently allows by using the followi
 `sudo ufw allow 'Nginx Full'`
 
 `stat --format '%a' <file>`
+
+
+1-click app for Digital Ocean Kubernetes
+
+https://www.digitalocean.com/community/questions/how-do-i-create-a-1-click-app-for-digital-ocean-kubernetes
+

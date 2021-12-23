@@ -22,3 +22,27 @@ docker run -dit -p 80:80 $3
 
 # Logout
 docker logout docker.pkg.github.com
+
+
+
+---------------
+chmod -R 777 /home/datauno-docker ??
+
+1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase monit -d
+   docker compose -f docker-compose.dev.yml down
+
+2. docker compose -f docker-compose.airflowfordatahub.yaml up -d
+   docker compose -f docker-compose.airflowfordatahub.yaml down
+
+3. docker compose -f docker-compose.datahub.yml up -d
+   docker compose -f docker-compose.datahub.yml down
+
+cd OpenDataDiscovery/
+
+4. docker compose -f docker-compose.opendatadiscovery.yaml up -d
+   docker compose -f docker-compose.opendatadiscovery.yaml down
+
+
+
+
+
