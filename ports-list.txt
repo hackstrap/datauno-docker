@@ -70,3 +70,4 @@ To checkout Ingestion via Airflow, go to http://localhost:8083 (username: admin,
 
 ODD Platform: http://localhost:8088 {username: admin, password: admin}
 
+DBT: 8000 and 8001

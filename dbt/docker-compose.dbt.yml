@@ -21,7 +21,8 @@ services:
     container_name: dbt-code-server
     restart: always
     ports:
-      - 8080:8080
+      - 8000:8080
+      - 8001:8001
     volumes:
       - ./code-server/config:/code/.config/code-server
       - ./dbt_project/dbt_profiles:/code/.dbt
