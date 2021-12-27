@@ -52,8 +52,11 @@ cd OpenDataDiscovery/
    docker compose -f docker-compose.opendatadiscovery.yaml down
 
 
-CREATE DATABASE IF NOT EXISTS testdb;
-show databases;
+CREATE DATABASE IF NOT EXISTS testdb
+show databases
+
+https://raw.githubusercontent.com/plotly/datasets/master/iris-data.csv
+
 
 
 

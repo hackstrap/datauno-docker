@@ -94,9 +94,9 @@ services:
 
   redis-airflow:
     image: redis:latest
-    hostname: redis-airflow
+    hostname: redis
     ports:
-      - 6779:6379
+      - 6379:6379
     networks:
       - datahub_network
     healthcheck:

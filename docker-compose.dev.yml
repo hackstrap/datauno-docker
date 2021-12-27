@@ -32,8 +32,10 @@ services:
 
   redis:
     image: redis:6.2.4-alpine
-    container_name: redis
+    container_name: redis-jitsu
     restart: always
+    ports:
+      - 6879:6379
     volumes:
       - ./backend/redis:/data
 
@@ -62,7 +64,7 @@ services:
     ports:
       - 8000:8000
     environment:
-      - REDIS_URL=redis://redis:6379
+      - REDIS_URL=redis://redis:6879
       - UI_AUTH_REFRESH_SECRET=ULWBZyNfBeXPPVbwsEwgNVezsbjjyVdq
       - UI_AUTH_ACCESS_SECRET=sNVPJZnQZLMpKXvVHfdHMnitNHsRmURC
       - SERVER_ADMIN_TOKEN=sNVPJZnSIKLJUHFBVIURHZDUnitNHsRmURC
