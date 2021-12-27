@@ -1,5 +1,5 @@
 #Choose a hostname
-ubuntu-g-4vcpu-16gb-sfo3-01-datauno-docker
+datauno-docker
 
 # Login using SSH
 ssh root@your_server_ip
@@ -9,10 +9,12 @@ ssh root@your_server_ip
 
 #Install Git
 Generally already installed
+git --version
 
 #General uddates
-Use the apt package management tools to update your local package index.
+##Use the apt package management tools to update your local package index.
 sudo apt update
+sudo apt upgrade -y
 
 #Setting Up Git
 Configuration can be achieved by using the git config command. 

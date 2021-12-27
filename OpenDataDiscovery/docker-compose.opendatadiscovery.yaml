@@ -66,6 +66,21 @@ services:
     depends_on:
       - odd-platform-puller
 
+  clickhouse-adapter:
+    image: ghcr.io/opendatadiscovery/adapters/odd-clickhouse-adapter:latest
+    environment:
+      - CLICKHOUSE_HOST=${CLICKHOUSEHOST}
+      - CLICKHOUSE_PORT=${CLICKHOUSEPORT}
+      - CLICKHOUSE_DATABASE=${CLICKHOUSEDATABASE}
+      - CLICKHOUSE_USER=${CLICKHOUSEUSER}
+      - CLICKHOUSE_PASSWORD=${CLICKHOUSEPASSWORD}
+      - FLASK_ENVIRONMENT=${FLASK_ENVIRONMENT}
+      - FLASK_APP=${FLASK_APP}
+    ports:
+      - 8086:8080
+    depends_on:
+      - odd-platform-puller
+
   glue-adapter:
     image: ghcr.io/opendatadiscovery/adapters/odd-glue-adapter:latest
     environment:
@@ -76,7 +91,7 @@ services:
       - FLASK_ENVIRONMENT=${FLASK_ENVIRONMENT}
       - FLASK_APP=${FLASK_APP}
     ports:
-      - 8086:8080
+      - 8087:8080
     depends_on:
       - odd-platform-puller
 
@@ -91,7 +106,7 @@ services:
       - FLASK_ENVIRONMENT=${FLASK_ENVIRONMENT}
       - FLASK_APP=${FLASK_APP}
     ports:
-      - 8087:8080
+      - 8088:8080
     depends_on:
       - odd-platform-puller
 
