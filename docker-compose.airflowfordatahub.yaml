@@ -62,7 +62,7 @@ x-airflow-common: &airflow-common
     - ./airflow/plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
   depends_on:
-    redis:
+    redis-airflow:
       condition: service_healthy
     postgres:
       condition: service_healthy
