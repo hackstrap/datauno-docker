@@ -32,7 +32,7 @@ cd datauno-docker
 
 chmod -R 777 /home
 
-1. docker compose -f docker-compose.dev.yml up antimatter redis-jitsu clickhouse tabix jitsu postgres-metabase metabase mindsdb monit -d
+1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse tabix jitsu postgres-metabase metabase mindsdb monit -d
    docker compose -f docker-compose.dev.yml down
 
 2. docker compose -f docker-compose.datahub.yml up -d

@@ -9,8 +9,8 @@ ports-list:
     container_name: postgres-lightdash
     port: 5434
 
-    container_name: redis-jitsu
-    port: 6779
+    container_name: redis
+    port: 6379
 
     container_name: jitsu
     port: 8000

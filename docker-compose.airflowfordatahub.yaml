@@ -92,11 +92,11 @@ services:
       retries: 5
     restart: always
 
-  redis:
+  redis-airflow:
     image: redis:latest
-    hostname: redis
+    hostname: redis-airflow
     ports:
-      - 6379:6379
+      - 6779:6379
     networks:
       - datahub_network
     healthcheck:
