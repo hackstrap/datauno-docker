@@ -64,7 +64,7 @@ services:
     ports:
       - 8000:8000
     environment:
-      - REDIS_URL=redis://redis:6779
+      - REDIS_URL="redis://redis-jitsu:6779"
       - UI_AUTH_REFRESH_SECRET=ULWBZyNfBeXPPVbwsEwgNVezsbjjyVdq
       - UI_AUTH_ACCESS_SECRET=sNVPJZnQZLMpKXvVHfdHMnitNHsRmURC
       - SERVER_ADMIN_TOKEN=sNVPJZnSIKLJUHFBVIURHZDUnitNHsRmURC
