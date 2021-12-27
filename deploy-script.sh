@@ -26,6 +26,10 @@ docker logout docker.pkg.github.com
 
 
 ---------------
+cd /home
+git clone https://github.com/hackstrap/datauno-docker.git
+cd datauno-docker
+
 chmod -R 777 /home/datauno-docker ??
 
 1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase monit -d --compatibility
