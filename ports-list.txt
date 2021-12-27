@@ -10,7 +10,7 @@ ports-list:
     port: 5434
 
     container_name: redis-jitsu
-    port: 6379
+    port: 6779
 
     container_name: jitsu
     port: 8000
@@ -43,7 +43,7 @@ ports-list:
     ports: 8082
 
     container_name: mindsdb
-    ports: 47334, 47335, 47336
+    ports: 47334 (UI), 47335, 47336
 
     container_name: taskcafe
     ports: 3333
@@ -68,6 +68,6 @@ visit the following url to begin exploring OpenMetadata: http://localhost:8585 (
 password: openmetadata_password)
 To checkout Ingestion via Airflow, go to http://localhost:8083 (username: admin, password: admin)
 
-ODD Platform: http://localhost:8088 {username: admin, password: admin}
+ODD Platform: http://localhost:8888 {username: admin, password: admin}
 
 DBT: 8000 and 8001 

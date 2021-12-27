@@ -30,16 +30,16 @@ cd /home
 git clone https://github.com/hackstrap/datauno-docker.git
 cd datauno-docker
 
-chmod -R 777 /home/datauno-docker ??
+chmod -R 777 /home
 
-1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase mindsdb monit -d --compatibility
+1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse tabix jitsu postgres-metabase metabase mindsdb monit -d
    docker compose -f docker-compose.dev.yml down
 
-2. docker compose -f docker-compose.airflowfordatahub.yaml up -d --compatibility
-   docker compose -f docker-compose.airflowfordatahub.yaml down
-
-3. docker compose -f docker-compose.datahub.yml up -d --compatibility
+2. docker compose -f docker-compose.datahub.yml up -d
    docker compose -f docker-compose.datahub.yml down
+
+3. docker compose -f docker-compose.airflowfordatahub.yaml up -d
+   docker compose -f docker-compose.airflowfordatahub.yaml down
 
 ##Register DataHub connection (hook) to Airflow
 ```
@@ -50,6 +50,11 @@ cd OpenDataDiscovery/
 
 4. docker compose -f docker-compose.opendatadiscovery.yaml up -d
    docker compose -f docker-compose.opendatadiscovery.yaml down
+
+
+CREATE DATABASE IF NOT EXISTS testdb;
+show databases;
+
 
 
 
