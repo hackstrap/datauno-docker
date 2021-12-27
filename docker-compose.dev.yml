@@ -47,6 +47,11 @@ services:
     volumes:
       - ./backend/clickhouse:/var/lib/clickhouse
       - ./ch-settings/etc/users.d/:/etc/clickhouse-server/users.d/
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 4096M
 
   jitsu:
     image: jitsucom/jitsu:latest
@@ -69,6 +74,11 @@ services:
       - ./backend/jitsu/login:/home/eventnative/data/airbyte
       - workspace:/home/eventnative/data/airbyte
       - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 4096M
 
   tabix:
     image: vchernikh/tabix:latest

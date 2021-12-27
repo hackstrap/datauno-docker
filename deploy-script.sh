@@ -28,13 +28,13 @@ docker logout docker.pkg.github.com
 ---------------
 chmod -R 777 /home/datauno-docker ??
 
-1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase monit -d
+1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase monit -d --compatibility
    docker compose -f docker-compose.dev.yml down
 
-2. docker compose -f docker-compose.airflowfordatahub.yaml up -d
+2. docker compose -f docker-compose.airflowfordatahub.yaml up -d --compatibility
    docker compose -f docker-compose.airflowfordatahub.yaml down
 
-3. docker compose -f docker-compose.datahub.yml up -d
+3. docker compose -f docker-compose.datahub.yml up -d --compatibility
    docker compose -f docker-compose.datahub.yml down
 
 cd OpenDataDiscovery/

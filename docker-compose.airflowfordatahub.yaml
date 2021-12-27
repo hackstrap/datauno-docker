@@ -68,6 +68,11 @@ x-airflow-common: &airflow-common
       condition: service_healthy
   networks:
     - datahub_network
+  deploy:
+    resources:
+      limits:
+        cpus: "0.5"
+        memory: 4096M
 
 services:
   postgres:

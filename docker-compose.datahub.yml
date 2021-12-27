@@ -1,6 +1,4 @@
-networks:
-  default:
-    name: datahub_network
+version: "3.5"
 services:
   zookeeper:
     container_name: zookeeper
@@ -175,9 +173,12 @@ services:
     ports:
       - 8081:8081
 
-version: "2.3"
 volumes:
   esdata: null
   mysqldata: null
   neo4jdata: null
   zkdata: null
+
+networks:
+  default:
+    name: datahub_network
