@@ -32,7 +32,7 @@ cd datauno-docker
 
 chmod -R 777 /home/datauno-docker ??
 
-1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase monit -d --compatibility
+1. docker compose -f docker-compose.dev.yml up antimatter redis clickhouse jitsu postgres-metabase metabase mindsdb monit -d --compatibility
    docker compose -f docker-compose.dev.yml down
 
 2. docker compose -f docker-compose.airflowfordatahub.yaml up -d --compatibility
