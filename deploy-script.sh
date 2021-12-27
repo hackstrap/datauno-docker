@@ -41,6 +41,11 @@ chmod -R 777 /home/datauno-docker ??
 3. docker compose -f docker-compose.datahub.yml up -d --compatibility
    docker compose -f docker-compose.datahub.yml down
 
+##Register DataHub connection (hook) to Airflow
+```
+docker exec -it `docker ps | grep webserver | cut -d " " -f 1` airflow connections add --conn-type 'datahub_rest' 'datahub_rest_default' --conn-host 'http://datahub-gms:8080'
+```
+
 cd OpenDataDiscovery/
 
 4. docker compose -f docker-compose.opendatadiscovery.yaml up -d
